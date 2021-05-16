@@ -41,8 +41,7 @@ last_year = datetime.date(2020, 3, 16)
 
 @st.cache
 def load_data():
-    workout_df = pd.read_json('/Users/ziadNader/Desktop/\
-Personal Projects/Apple Health /Data/Processed/\
+    workout_df = pd.read_json('/Users/ziadNader/Desktop/Personal Projects/Apple Health /streamlit-app/\
 workouts_processed.json')
     return workout_df
 
