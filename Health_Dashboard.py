@@ -1,5 +1,6 @@
 ###################################### LIBRARIES ##########################################################
 #%%
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -36,12 +37,12 @@ with col2:
 st.markdown("------------------")
 
 last_year = datetime.date(2020, 3, 16)
-
+st.text(os.getcwd())
 ###################################### LOAD DATA 
 
 @st.cache
 def load_data():
-    workout_df = pd.read_json('/Users/ziadNader/Desktop/Personal Projects/Apple Health /streamlit-app/workouts_processed.json')
+    workout_df = pd.read_json('/Users/ziadNader/Desktop/Personal Projects/Apple Health /streamlit-app/aworkouts_processed.json')
     return workout_df
 
 workout_df = load_data()
